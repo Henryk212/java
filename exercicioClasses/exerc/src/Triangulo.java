@@ -1,4 +1,4 @@
-class Triangulo {
+public class Triangulo {
     double base;
     double altura;
 

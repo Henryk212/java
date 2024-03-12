@@ -1,4 +1,4 @@
-class Cafeteira {
+public class Cafeteira {
     boolean ligada;
     int quantidadeCafe;
     int quantidadeAgua;
