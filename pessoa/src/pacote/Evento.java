@@ -16,40 +16,53 @@ public class Evento {
         return 0;
     }
 
-    public float verArrecadacao() {
-        return this.ingressosVendidos * this.precoIngreco;
+    public String getNome() {
+        return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getNome() {
-        return this.nome;
+
+    public String getData() {
+        return data;
     }
+
     public void setData(String data) {
         this.data = data;
     }
-    public String getData() {
-        return this.data;
+
+    public float getPrecoIngreco() {
+        return precoIngreco;
     }
+
     public void setPrecoIngreco(float precoIngreco) {
         this.precoIngreco = precoIngreco;
     }
-    public float getPrecoIngreco() {
-        return this.precoIngreco;
+
+    public int getQuantidadeIngressos() {
+        return quantidadeIngressos;
     }
+
     public void setQuantidadeIngressos(int quantidadeIngressos) {
         this.quantidadeIngressos = quantidadeIngressos;
     }
-    public int getQuantidadeIngressos() {
-        return this.quantidadeIngressos;
+
+    public int getIngressosVendidos() {
+        return ingressosVendidos;
     }
 
     public void setIngressosVendidos(int ingressosVendidos) {
         this.ingressosVendidos = ingressosVendidos;
     }
-    public int getIngressosVendidos() {
-        return this.ingressosVendidos;
+
+    @Override
+    public String toString() {
+        return "Evento [nome=" + nome + ", data=" + data + ", precoIngreco=" + precoIngreco + ", quantidadeIngressos="
+                + quantidadeIngressos + ", ingressosVendidos=" + ingressosVendidos + "]";
     }
+
+   
+  
 
 }
