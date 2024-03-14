@@ -7,13 +7,25 @@ public class Evento {
     private int quantidadeIngressos;
     private int ingressosVendidos;
 
+    public Evento(String nome, String data, float precoIngreco, int quantidadeIngressos) {
+        this.nome = nome;
+        this.data = data;
+        this.precoIngreco = precoIngreco;
+        this.quantidadeIngressos = quantidadeIngressos;
+        this.ingressosVendidos = 0;
+    }
+
     public float venderIngresso(int quantidade) {
-        if (quantidade <= this.quantidadeIngressos) {
+        if (quantidade <= this.quantidadeIngressos && quantidade > 0) {
             this.ingressosVendidos += quantidade;
             this.quantidadeIngressos -= quantidade;
             return quantidade * this.precoIngreco;
         }
         return 0;
+    }
+
+    public float verArrecadacao() {
+        return this.ingressosVendidos * this.precoIngreco;
     }
 
     public String getNome() {
@@ -61,8 +73,5 @@ public class Evento {
         return "Evento [nome=" + nome + ", data=" + data + ", precoIngreco=" + precoIngreco + ", quantidadeIngressos="
                 + quantidadeIngressos + ", ingressosVendidos=" + ingressosVendidos + "]";
     }
-
-   
-  
 
 }
