@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -9,6 +10,25 @@ public class App {
     System.out.println(agenda);
     agenda.removerContato("Henrique Moraes");
     System.out.println(agenda);
+
+    // Produto produto1 = new Produto(1, "Chocolate", 10.5f);
+
+    // System.out.println(produto1);    
+
+    CadastrarProduto havan = new CadastrarProduto(new ArrayList<Produto>());
+
+    havan.adicionarProduto(new Produto( "Chocolate", 10.5f));
+    havan.adicionarProduto(new Produto( "Canivete", 150.5f));
+    havan.adicionarProduto(new Produto( "Mochila", 100.5f));
+    havan.adicionarProduto(new Produto("caneta", 1.5f));
+    havan.adicionarProduto(new Produto( "Molho de alho", 6.5f));
+
+    System.out.println(havan);
+
+    havan.removerProduto(4);
+
+    System.out.println(havan);
+
 
     }
 }
