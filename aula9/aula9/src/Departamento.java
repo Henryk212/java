@@ -10,6 +10,22 @@ public class Departamento {
         this.funcionarios = funcionarios;
     }
 
+    public Funcionario buscraFuncionarioPorCpf(String cpf){
+        return funcionarios.stream().filter(f -> f.getCpf().equals(cpf)).findFirst().orElse(null);
+    }
+    public Funcionario buscraFuncionarioPorNome(String nome){
+        return funcionarios.stream().filter(f -> f.getNome().equals(nome)).findFirst().orElse(null);
+    }
+
+    public void adicionarFuncionario(Funcionario funcionario){
+        if(buscraFuncionarioPorCpf(funcionario.getCpf()) == null){
+            funcionarios.add(funcionario);
+        }
+    }
+
+    public void removerFuncionario(String cpf){
+        funcionarios.remove(buscraFuncionarioPorCpf(cpf));
+    }
 
     public String getNome() {
         return nome;

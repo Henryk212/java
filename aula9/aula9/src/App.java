@@ -29,6 +29,30 @@ public class App {
 
     System.out.println(havan);
 
+    Funcionario fun1 = new Funcionario("HEnrique", "98765431", "Lider tech", 30);
+    Funcionario fun2 = new Funcionario("HEnrique 9", "98788931", "Lider tech 2", 30);
+    Funcionario fun3 = new Funcionario("HEnrique 10", "654654654", "Lider tech 3", 30);
+    Funcionario fun4 = new Funcionario("HEnrique 11", "56465456", "Lider tech 4", 30);
+
+    Departamento departamento1 = new Departamento("Adm",new ArrayList<Funcionario>());
+    Departamento departamento2 = new Departamento("Financeiro",new ArrayList<Funcionario>());
+    Departamento departamento3 = new Departamento("Desenvolvimento",new ArrayList<Funcionario>());
+
+    Empresa empresa = new Empresa(new ArrayList<Departamento>());
+    
+    empresa.adicionarDepartamento(departamento3);
+    empresa.adicionarDepartamento(departamento2);
+    empresa.adicionarDepartamento(departamento1);
+
+    empresa.adicionarFuncionario(fun4, "Desenvolvimento");
+    empresa.adicionarFuncionario(fun2, "Financeiro");
+    empresa.adicionarFuncionario(fun3, "Adm");
+    empresa.adicionarFuncionario(fun1, "Desenvolvimento");
+
+    System.out.println(empresa);
+
+    System.out.println(departamento1);
+    
 
     }
 }
